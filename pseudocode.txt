@@ -1,0 +1,92 @@
+## PSEUDOCODE SISTEM KASIR
+
+START PROGRAM
+
+READ AND WRITE hargaBarang1, hargaBarang2, hargaBarang3, hargaBarang4, hargaBarang5 : float
+READ AND WRITE jml : integer
+READ AND WRITE jumBarang1, jumBarang2, jumBarang3, jumBarang4, jumBarang5 : integer
+READ AND WRITE namaBarang1, namaBarang2, namaBarang3, namaBarang4, namaBarang5 : string
+READ AND WRITE totalBayar : float
+READ AND WRITE kodeBarang : char
+READ AND WRITE kembalian : float
+READ AND WRITE diBayar : float
+READ AND WRITE totalBayar_diskon: float
+READ AND WRITE diskon : float
+READ AND WRITE status : bolean 
+
+READ AND WRITE "kodeBarang"
+READ AND WRITE "jml"
+WHILE "status = true"
+
+if kodeBarang = 001 THEN
+    READ AND WRITE namaBarang1 = ("buku gambar")
+    READ AND WRITE hargaBarang1 = 10000
+    READ AND WRITE jml = jumBarang1
+else if kodeBarang = 002 THEN
+    READ AND WRITE namaBarang2 = ("pensil")
+    READ DAN WRITE hargaBarang2 = 5000
+    READ AND WRITE jml = jumBarang2
+else if kodeBarang = 003 THEN
+    READ AND WRITE namaBarang3 = ("penghapus")
+    READ AND WRITE hargaBarang3 = 6000
+    READ AND WRITE jml = jumBarang3
+else if kodeBarang = 004 THEN
+    READ AND WRITE namaBarang4 = ("buku tulis")
+    READ AND WRITE hargaBarang4 = 25000
+    READ AND WRITE jml = jumBarang4
+else if kodeBarang = 005 THEN
+    READ AND WRITE namaBarang5 = ("penggaris")
+    READ AND WRITE hargaBarang5 = 12000
+    READ AND WRITE jml = jumBarang5
+else 
+    READ AND WRITE("silahkan masukan kode barang dengan benar")
+end if
+
+
+READ AND WRITE "pilih 1 untuk menambah belanjaan, pilih 2 untuk lanjut transaksi"
+READ AND WRITE "pilih"
+
+if pilih = 1 THEN
+    (status = false)
+else if pilih = 2 THEN 
+    (status = true)
+else 
+    READ AND WRITE("silahkan klik/pilih angka 1 atau 2)
+    READ AND WRITE("pilih 1 untuk menambah belanjaan, 2 untuk selesai)
+end if 
+STORE totalBayar WITH CALCULATE jml * hargaBarang1 + jml * hargaBarang2 + jml * hargaBarang3 + jml * hargaBarang4 + jml * hargaBarang5
+
+
+
+if totalBayar >= 150000 then
+    READ AND WRITE ("Masukan jumlah uang bayar : ")
+    READ AND WRITE (diBayar)
+    READ AND WRITE ("Total bayar setelah diskon : ")
+    STORE totalBayar_diskon WITH CALCULATE totalBayar -(totalBayar/10)
+    PRINT kembalian = diBayar - totalBayar_diskon
+else 
+    READ AND WRITE "Masukan jumlah uang bayar : "
+    READ AND WRITE "diBayar"
+    READ AND WRITE "Total bayar tanpa diskon : "
+    READ AND WRITE "totalBayar_diskon = totalBayar"
+    STORE kembalian WITH CALCULATE diBayar - totalBayar
+    (status = true)
+
+END IF
+
+READ AND WRITE "nama-nama barang yang di beli, jumlah dan harganya"
+PRINT "namaBarang1", "jumBarang1", "hargaBarang1"
+PRINT "namaBarang2", "jumBarang2", "hargaBarang2"
+PRINT "namaBarang3", "jumBarang3", "hargaBarang3"
+PRINT "namaBarang4", "jumBarang4", "hargaBarang4"
+PRINT "namaBarang5", "jumBarang5", "hargaBarang5"
+
+READ AND WRITE "total uang di bayar : "
+PRINT "diBayar"
+READ AND WRITE "total uang belanjaan: "
+PRINT "totalBayar"
+READ AND WRITE "total kembalian : "  
+PRINT "kembalian"
+READ AND WRITE "terima kasih telah berbelanja di toko ABDILLAH MUSTAMIN - FE2682593"
+
+END PROGRAM
